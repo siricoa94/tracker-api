@@ -9,7 +9,7 @@ const statuses = ['New', 'Assigned', 'Fixed', 'Closed'];
 
 const initialCount = db.issue.count();
 
-for (let i = 0; i < 300; i += 1) {
+for (let i = 0; i < 10; i += 1) {
     const randomCreatedDate = (new Date()) - Math.floor(Math.random() * 60) * 1000 * 60 * 60 * 24;
     const created = new Date(randomCreatedDate);
     const randomDueDate = (new Date()) - Math.floor(Math.random() * 60) * 1000 * 60 * 60 * 24;

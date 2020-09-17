@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "pro-mern-stack-api",
   "main": "index.js",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "start": "nodemon -e js,graphql -w . -w .env server.js",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "initDB": "mongo mongodb+srv://dbMaster:<Omniknight98>@issue-tracker.tz5ab.mongodb.net/<issue-tracker>?retryWrites=true&w=majority scripts/init.mongo.js"
   },
   "author": "Andrew L. Sirico",
   "license": "ISC",
@@ -21,7 +26,7 @@
     "graphql": "^14.2.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.9",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.19.4"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
