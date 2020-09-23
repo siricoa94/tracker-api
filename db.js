@@ -4,10 +4,10 @@ const { MongoClient } = require('mongodb');
 let db;
 
 async function connectToDb() {
-    const url = process.env.DB_URL || 'mongodb://localhost/issuetracker';
-    const client = new MongoClient(url, { useNewUrlParser: true });
+    const uri = process.env.DB_URL || 'mongodb://localhost/issuetracker';
+    const client = new MongoClient(uri, { useNewUrlParser: true });
     await client.connect();
-    console.log('Connected to MongoDB at: ', url);
+    console.log('Connected to MongoDB at: ', uri);
     db = client.db();
 }
 
